@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <link rel="alternate stylesheet" type="text/css" href="resource://gre-resources/plaintext.css"
+
+      title="Wrap Long Lines">
+  </head>
+  <body>
+    <pre>&lt;style&gt;
+.grid {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 1em;
+}
+
+header,
+aside,
+article,
+footer {
+  background: #eaeaea;
+  padding: 1em;
+}
+
+header, footer {
+  grid-column: 1 / 4;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+.grid &gt; * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {width: 100%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 100%;}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+ .header {
+  background-color: ORANGE;
+  color: #000000;
+  font-family: "Lucida Sans", sans-serif;
+  padding: 15px;
+	}
+ 
+.span {span style="font-family: verdana , monaco;font-size: xx-large;"}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+.button {
+  background-color: orange;
+  border: none;
+  color: Black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+footer: 
+
+&lt;img style="border:0; width:88px; height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="CSS Validation Button" /&gt;
+
+
+&lt;/style&gt;
+</pre>
+  </body>
+</html>
