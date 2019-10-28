@@ -1,3 +1,265 @@
-# pmpope.github.io
-WEB110 Repository
-Hello GitHub W0rld!
+<meta charset="UTF-8"></meta>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1">
+</meta>
+
+<link
+  href="styles/newdefault.css"
+  rel="stylesheet"
+  type="text/css">
+</link>
+
+<title>Philip Pope WEB110 Fall 2019</title>
+<div class="body"></div>
+
+<div> <p style="text-align: center;">pmpope.dev || Technology + Multimedia || Style & Function</div>
+
+<p style="text-align: center;"><span class="span">Philip M. Pope</span></p>
+
+<p style="text-align: center;">
+  <img
+    alt="PMPope with orange light"
+    src="images/PMPope2013web.png"
+    title="PMPope"
+    style="display: block;margin-left: auto;margin-right: auto;"
+    width="184"
+    height="184"/>
+  <span style="font-size: medium;color: rgb(255,102,0);">
+    <em>
+      <span style="font-family: book antiqua , palatino;">Noodling around in orange light</span>
+    </em>
+  </span>
+</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Navigate</button>
+  <div class="dropdown-content">
+  <a href="indexx.html">Home</a>
+  <a href="contract.html">Contract</a>
+  <a href="template.html">Template</a>
+  </div>
+</div>
+<br>
+<li>
+  <strong>
+    Professional Background:
+
+    <style:
+      max-width:
+      500px;>
+    </style:>
+  </strong>
+</li>
+
+A child once asked: What do you do... for a living? My response: I live! Started my own companies
+(multimedia, e-publishing, electronic art) back in the 90's, whilst galavanting (i.e. -
+hitch-hiking, driving, flying) from coast-to-coast and throughout Europe (pre-social media and
+pre-inexpensive/disposable electronic devices).Through the 2000s, stayed on the West Coast
+(CA-to-WA) and worked so many jobs it would make collective millenial heads spin and implode.
+Returned to the east coast to look after my mother.
+<p></p>
+
+<p></p>
+
+<li>
+  <strong>Academic Background:</strong>
+
+  <div
+    style:
+    max-width:
+    500px;>
+    Graduated the illustrious Class of '84 (not unlike the awful punk rockish movie of the same
+    name) from Garinger High School (Go Wildcats!) Audited college classes through UT-Austin,
+    UW-Madison, Photography - New School NYC.
+  </div>
+</li>
+
+<strong>Certificates:</strong>
+
+Apex Tech (metallurgy) NYC, Harvard - EduX, Videography - CPCC
+
+<p></p>
+
+<li>
+  <strong>Primary Computer Platform:</strong>
+
+  I love Linux (i keep up with current distributions on a regular basis). Apple/Mac some design
+  software is exceptional (i also love their A/V software) I own a Mac Mini and an iPad. I am typing
+  this intro on my Lenovo Legion. In my room i have a stack of ThinkPads, no less then 5 mid-towers
+  with a combination of various Linux/Windows OSes, Chromebox, Rasberry Pi... in other words,
+  run-of-the-mill computer enthusiast
+  <br/>
+
+  <div
+    style:
+    max-width:
+    500px;>
+    <p></p>
+  </div>
+</li>
+
+<li>
+  <strong>Courses I am Taking, and Why:</strong>
+
+  <ul>
+    <li>
+      <strong>DBA-120</strong>
+
+      - This is a required course for the Web Developer AA, I would take it anyway. I love databases
+      (both admin and just day-to-day manipulation
+    </li>
+
+    <li>
+      <strong>Eng-111</strong>
+
+      - Writing and Inquiry - This course impacts other classes eligibility. I have written multiple
+      books of poetry and screenplays. Thus said, this course may prove beneficial in fine tuning
+      upcoming project
+    </li>
+
+    <li>
+      <strong>WEB-110</strong>
+
+      - I hope to be able to procure funding for my multimedia endeavors by working the web. This
+      seems like a good place to start.
+    </li>
+
+    <li>
+      <strong>CS50</strong>
+
+      - I have begun this course work over two years ago and am attempting to be able to finish this
+      time (fingers crossed)
+    </li>
+  </ul>
+</li>
+
+<p></p>
+
+<p></p>
+
+<li>
+  <strong>Something to Remember Me By</strong>
+
+  : I was the first American poet to coin the term 'video poetry and video poem' cirrca 1993
+</li>
+
+<p></p>
+
+<p></p>
+
+<li>
+  <strong>I Would Also Like to Share</strong>
+
+  : I am an artist, a technologist, and a published poet
+</li>
+
+<p></p>
+
+<p style="text-align: center;">
+  <a
+    href="http://students.cpcc.edu/~ppope002/"
+    target="_blank">
+    <span style="font-family: inherit;text-shadow: none;letter-spacing: normal;margin: 0.0px;padding: 0.0px;border-width: 0.0px;border-bottom-color: rgb(43,104,153);outline: 0.0px;font-weight: inherit;font-style: inherit;font-size: 13.0px;color: rgb(43,104,153);text-decoration: underline;">
+      My Webspace
+    </span>
+  </a>
+  <a href="http://students.cpcc.edu/~ppope002/">
+      Blah!
+  </a>
+  🔶
+
+  <a
+    href="https://github.com/PMPope"
+    target="_blank">
+    <span style="font-family: inherit;text-shadow: none;letter-spacing: normal;margin: 0.0px;padding: 0.0px;border-width: 0.0px;border-bottom-color: rgb(43,104,153);outline: 0.0px;font-weight: inherit;font-style: inherit;font-size: 13.0px;color: rgb(43,104,153);text-decoration: underline;">
+      <button>Github</button>
+    </span>
+  </a>
+
+  🔶
+
+  <a
+    href="https://www.khanacademy.org/profile/PMPope/courses"
+    target="_blank">
+    <span style="font-family: inherit;text-shadow: none;letter-spacing: normal;margin: 0.0px;padding: 0.0px;border-width: 0.0px;border-bottom-color: rgb(43,104,153);outline: 0.0px;font-weight: inherit;font-style: inherit;font-size: 13.0px;color: rgb(43,104,153);text-decoration: underline;">
+      <button>Khan Academy</button>
+    </span>
+  </a>
+
+  🔶
+
+  <a
+    href="https://www.codecademy.com/profiles/PMPope%20"
+    target="_blank">
+    <span style="font-family: inherit;text-shadow: none;letter-spacing: normal;margin: 0.0px;padding: 0.0px;border-width: 0.0px;border-bottom-color: rgb(43,104,153);outline: 0.0px;font-weight: inherit;font-style: inherit;font-size: 13.0px;color: rgb(43,104,153);text-decoration: underline;">
+      <button>Codecademy</button>
+    </span>
+  </a>
+
+  🔶
+
+  <a
+    href="https://www.freecodecamp.org/pmpope"
+    target="_blank">
+    <button>freeCodeCamp</button>
+  </a>
+
+  🔶
+
+  <a
+    href="https://jsfiddle.net/PMPope/0ecvmfx2/"
+    target="_blank">
+    <button>JSFiddle</button>
+  </a>
+
+  🔶
+
+  <a
+    href="https://profile.edx.org/u/pmpope"
+    target="_blank">
+    <button>EdX.org</button>
+  </a>
+</p>
+
+<p style="text-align: center;"></p>
+
+<footer><p style="text-align: center;">
+  <img
+    align
+    alt="Valid-HTML"
+    src="images/HTML5Button.png"
+    border="0"
+    vertical-align:
+    middle;/>
+  <img
+    align
+    alt="Valid-CSS"
+    src="images/CSS3Button.png"
+    border="0"
+    vertical-align:
+    middle;/>
+  <a
+    href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    rel="license">
+    <img
+      alt="Creative Commons License"
+      src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+      style="border-width:0"/>
+  </a>
+
+  <br/>
+
+  This work is licensed under a
+
+  <a
+    href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    rel="license">
+    Creative Commons License
+  </a>
+
+  .
+</p>
+
+<p style="text-align: center;">PMPope | Charlotte, NC | MultiMedia</p></footer>
