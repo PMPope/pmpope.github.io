@@ -52,3 +52,22 @@ body {
   50% { opacity: 0.5; text-shadow: 0 0 2px #900; }
   100% { opacity: 1; text-shadow: 0 0 5px #f00, 0 0 20px #fff; }
 }
+
+a, .main-header, .poem-title {
+  transition: text-shadow 0.3s ease;
+}
+
+a:hover, .main-header:hover, .poem-title:hover {
+  text-shadow:
+    0 0 10px #00fff7,
+    0 0 20px #00fff7,
+    0 0 30px #00d7d7,
+    0 0 40px #00b7b7;
+}
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
+}
+<audio controls autoplay loop style="width: 100%; margin-top: 2rem; outline: none;">
+  <source src="your-audio-file.mid" type="audio/midi">
+  Your browser does not support the audio element.
+</audio>
