@@ -1,0 +1,54 @@
+@import url('https://api.fontshare.com/css?f[]=namesys@400&f[]=inter@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0c0c0c;
+  color: #e6e6e6;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-header {
+  font-family: 'Namesys', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #4ef2e4;
+  text-shadow: 0 0 5px #00ffe0;
+}
+
+.poem-title {
+  font-family: 'Namesys', sans-serif;
+  font-size: 2rem;
+  color: #ffccee;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.glitch-title {
+  font-family: 'Namesys', sans-serif;
+  font-size: 1.5rem;
+  color: #ff6666;
+  margin-top: 2rem;
+  letter-spacing: 0.05em;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; text-shadow: 0 0 5px #f00, 0 0 10px #f00; }
+  50% { opacity: 0.5; text-shadow: 0 0 2px #900; }
+  100% { opacity: 1; text-shadow: 0 0 5px #f00, 0 0 20px #fff; }
+}
