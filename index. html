@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Digit Muse Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="main-header">Neon Digit Muse</h1>
+    <h2 class="poem-title">Especially for the Children and the Animals of the Future</h2>
+    <p>
+      Down in a hole // light filters through // our rights don't come from government // the One above lights our path.
+    </p>
+    <h3 class="glitch-title">Flickering Freedom // Cyber Psalms</h3>
+    <p>
+      This is the font pairing test bed — <em>Namesys</em> meets <em>Inter</em>, like static meeting breath. How’s the vibe?
+    </p>
+  </main>
+</body>
+</html>
