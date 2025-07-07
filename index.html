@@ -158,6 +158,23 @@
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
     });
+// 🎵 Muse Audio Control
+const audio = document.getElementById('muse-audio');
+const toggle = document.getElementById('audio-toggle');
+
+toggle.addEventListener('click', () => {
+  if (audio.muted) {
+    audio.muted = false;
+    toggle.textContent = '🔊 Muse: On';
+    toggle.style.background = '#0f0';
+    toggle.style.boxShadow = '0 0 15px #0f0';
+  } else {
+    audio.muted = true;
+    toggle.textContent = '🔈 Muse: Off';
+    toggle.style.background = '#0ff';
+    toggle.style.boxShadow = '0 0 10px #0ff';
+  }
+});
   </script>
 <!-- 🌌 Ambient Audio -->
 <audio id="muse-audio" loop autoplay muted>
