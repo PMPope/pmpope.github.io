@@ -85,6 +85,27 @@
       font-size: 1rem;
       line-height: 1.6;
     }
+.audio-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #0ff;
+  color: black;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #0ff;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.audio-toggle.active {
+  background-color: #0f0;
+  box-shadow: 0 0 15px #0f0;
+}
   </style>
 </head>
 <body>
