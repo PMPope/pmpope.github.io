@@ -159,6 +159,29 @@
       height = canvas.height = window.innerHeight;
     });
   </script>
+<!-- 🌌 Ambient Audio -->
+<audio id="muse-audio" loop autoplay muted>
+  <source src="https://assets.codepen.io/605876/ambient-loop.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
 
+<!-- 🎛️ Toggle Button -->
+<button id="audio-toggle" style="
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #0ff;
+  color: black;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #0ff;
+  z-index: 10;
+  cursor: pointer;
+">
+  🔈 Muse: Off
+</button>
 </body>
 </html>
