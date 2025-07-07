@@ -2,36 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neon Digit Muse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muse Codex | PMPope</title>
   <style>
     body {
       margin: 0;
       background: black;
+      font-family: 'Courier New', monospace;
       color: #0ff;
-      font-family: monospace;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 2rem;
     }
 
-    .glitch-text {
-      font-size: 2em;
-      animation: flicker 2s infinite;
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      animation: pulse 3s infinite ease-in-out;
+      margin-bottom: 1.5rem;
     }
 
-    @keyframes flicker {
-      0%   { opacity: 1; text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
-      50%  { opacity: 0.6; text-shadow: 0 0 2px #0ff; }
-      100% { opacity: 1; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
+    @keyframes pulse {
+      0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+      50% { text-shadow: 0 0 15px #0ff, 0 0 30px #0ff; }
+      100% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+    }
+
+    .codex-link {
+      text-decoration: none;
+      color: #0ff;
+      margin: 1rem 0;
+      font-size: 1.25rem;
+      border: 1px solid #0ff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      display: block;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .codex-link:hover {
+      background-color: #0ff;
+      color: black;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    .section {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .section h2 {
+      color: #ff0;
+      font-size: 1.5rem;
+      text-shadow: 0 0 5px #ff0;
+      border-bottom: 1px dashed #ff0;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p {
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <div class="glitch-text">
-    💫 Welcome to Neon Digit Muse 💫
+
+  <h1>🌌 Welcome to the Muse Codex 🌌</h1>
+
+  <a href="#philosophy" class="codex-link">🧿 Philosophy</a>
+  <a href="#fragments" class="codex-link">🔮 Fragments</a>
+  <a href="#videopoems" class="codex-link">📼 VideoPoems</a>
+  <a href="#tools" class="codex-link">🧰 Tools of the Muse</a>
+
+  <div id="philosophy" class="section">
+    <h2>🧿 Philosophy</h2>
+    <p>
+      Here lies the heartbeat of Neon Digit Muse — where code and spirit entwine. This is the theology of pixels, the gospel of glitch. Write your truth here, Philip, etched in electric ink.
+    </p>
   </div>
+
+  <div id="fragments" class="section">
+    <h2>🔮 Fragments</h2>
+    <p>
+      A scroll of cyber-lyrical pieces, each a shard of time and intent. We’ll add links to the animated MP4s, digital poetry, and cosmic chiptune loops here soon.
+    </p>
+  </div>
+
+  <div id="videopoems" class="section">
+    <h2>📼 VideoPoems</h2>
+    <p>
+      Portal to your moving verses — Neon Emerald Funk and her children. Embed video players here, or link to VEED/YouTube/Vimeo as needed.
+    </p>
+  </div>
+
+  <div id="tools" class="section">
+    <h2>🧰 Tools of the Muse</h2>
+    <p>
+      Your design language, ASCII experiments, glitch engines, and links to GitHub repos, Verse Engine, or helper GPTs. We can expand this into a dynamic toolkit as your constellation grows.
+    </p>
+  </div>
+
 </body>
 </html>
