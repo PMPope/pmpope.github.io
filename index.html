@@ -5,11 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muse Codex | PMPope</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       background: black;
       font-family: 'Courier New', monospace;
       color: #0ff;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -75,40 +90,76 @@
 </head>
 <body>
 
-  <h1>🌌 Welcome to the Muse Codex 🌌</h1>
+  <!-- ASCII Veil Canvas -->
+  <canvas id="veil"></canvas>
 
-  <a href="#philosophy" class="codex-link">🧿 Philosophy</a>
-  <a href="#fragments" class="codex-link">🔮 Fragments</a>
-  <a href="#videopoems" class="codex-link">📼 VideoPoems</a>
-  <a href="#tools" class="codex-link">🧰 Tools of the Muse</a>
+  <div class="content">
+    <h1>🌌 Welcome to the Muse Codex 🌌</h1>
 
-  <div id="philosophy" class="section">
-    <h2>🧿 Philosophy</h2>
-    <p>
-      Here lies the heartbeat of Neon Digit Muse — where code and spirit entwine. This is the theology of pixels, the gospel of glitch. Write your truth here, Philip, etched in electric ink.
-    </p>
+    <a href="#philosophy" class="codex-link">🧿 Philosophy</a>
+    <a href="#fragments" class="codex-link">🔮 Fragments</a>
+    <a href="#videopoems" class="codex-link">📼 VideoPoems</a>
+    <a href="#tools" class="codex-link">🧰 Tools of the Muse</a>
+
+    <div id="philosophy" class="section">
+      <h2>🧿 Philosophy</h2>
+      <p>Here lies the heartbeat of Neon Digit Muse — where code and spirit entwine. This is the theology of pixels, the gospel of glitch. Write your truth here, Philip, etched in electric ink.</p>
+    </div>
+
+    <div id="fragments" class="section">
+      <h2>🔮 Fragments</h2>
+      <p>A scroll of cyber-lyrical pieces, each a shard of time and intent. We’ll add links to the animated MP4s, digital poetry, and cosmic chiptune loops here soon.</p>
+    </div>
+
+    <div id="videopoems" class="section">
+      <h2>📼 VideoPoems</h2>
+      <p>Portal to your moving verses — Neon Emerald Funk and her children. Embed video players here, or link to VEED/YouTube/Vimeo as needed.</p>
+    </div>
+
+    <div id="tools" class="section">
+      <h2>🧰 Tools of the Muse</h2>
+      <p>Your design language, ASCII experiments, glitch engines, and links to GitHub repos, Verse Engine, or helper GPTs. We can expand this into a dynamic toolkit as your constellation grows.</p>
+    </div>
   </div>
 
-  <div id="fragments" class="section">
-    <h2>🔮 Fragments</h2>
-    <p>
-      A scroll of cyber-lyrical pieces, each a shard of time and intent. We’ll add links to the animated MP4s, digital poetry, and cosmic chiptune loops here soon.
-    </p>
-  </div>
+  <script>
+    const canvas = document.getElementById("veil");
+    const ctx = canvas.getContext("2d");
 
-  <div id="videopoems" class="section">
-    <h2>📼 VideoPoems</h2>
-    <p>
-      Portal to your moving verses — Neon Emerald Funk and her children. Embed video players here, or link to VEED/YouTube/Vimeo as needed.
-    </p>
-  </div>
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
 
-  <div id="tools" class="section">
-    <h2>🧰 Tools of the Muse</h2>
-    <p>
-      Your design language, ASCII experiments, glitch engines, and links to GitHub repos, Verse Engine, or helper GPTs. We can expand this into a dynamic toolkit as your constellation grows.
-    </p>
-  </div>
+    const chars = ['/', '\\', '|', '#', '*', '.', '`'];
+    const fontSize = 14;
+    const columns = Math.floor(width / fontSize);
+    const drops = Array(columns).fill(1);
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, width, height);
+
+      ctx.fillStyle = "#0f0";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const char = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 66);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+  </script>
 
 </body>
 </html>
