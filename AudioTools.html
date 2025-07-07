@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Toggle Test</title>
+  <style>
+    body {
+      background: black;
+      color: #0ff;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #audio-toggle {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #0ff;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    #audio-toggle.active {
+      background-color: #0f0;
+      box-shadow: 0 0 15px #0f0;
+    }
+  </style>
+</head>
+<body>
+
+<audio id="muse-audio" loop autoplay muted>
+  <source src="https://assets.codepen.io/605876/ambient-loop.mp3" type="audio/mpeg" />
+</audio>
+
+<button id="audio-toggle">🔈 Muse: Off</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('muse-audio');
+    const toggle = document.getElementById('audio-toggle');
+
+    toggle.addEventListener('click', () => {
+      if (audio.muted) {
+        audio.muted = false;
+        toggle.textContent = '🔊 Muse: On';
+        toggle.classList.add('active');
+      } else {
+        audio.muted = true;
+        toggle.textContent = '🔈 Muse: Off';
+        toggle.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
