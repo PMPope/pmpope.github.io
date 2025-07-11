@@ -277,5 +277,11 @@ body.collapsed .main-content {
       });
     });
   </script>
+<script>
+  const toggleSidebar = document.getElementById('sidebar-toggle');
+  toggleSidebar.addEventListener('click', () => {
+    document.body.classList.toggle('collapsed');
+  });
+</script>
 </body>
 </html>
