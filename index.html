@@ -4,129 +4,182 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muse Codex | PMPope</title>
- body {
-  margin: 0;
-  font-family: 'Courier New', monospace;
-  background-color: black;
-  color: #39ff14;
-  display: flex;
-}
 
-.sidebar {
-  width: 240px;
-  background: linear-gradient(to bottom, #0a0a0a, #111111);
-  padding: 1.5em 1em;
-  box-shadow: 5px 0 15px #00f5ff66;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-y: auto;
-  border-right: 2px solid #00f5ff44;
-  z-index: 10;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: black;
+      color: #39ff14;
+      display: flex;
+    }
 
-.sidebar::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; height: 5px;
-  background: linear-gradient(to right, #00f5ff, transparent, #00f5ff);
-  box-shadow: 0 0 10px #00f5ffaa;
-}
+    .sidebar {
+      width: 240px;
+      background: linear-gradient(to bottom, #0a0a0a, #111111);
+      padding: 1.5em 1em;
+      box-shadow: 5px 0 15px #00f5ff66;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+      border-right: 2px solid #00f5ff44;
+      z-index: 10;
+    }
 
-.sidebar h2 {
-  color: #00f5ff;
-  font-size: 1.4em;
-  text-align: center;
-  margin-bottom: 1em;
-  text-shadow: 0 0 5px #00f5ff, 0 0 10px #39ff14;
-  border-bottom: 1px solid #00f5ff33;
-  padding-bottom: 0.5em;
-}
+    .sidebar::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 5px;
+      background: linear-gradient(to right, #00f5ff, transparent, #00f5ff);
+      box-shadow: 0 0 10px #00f5ffaa;
+    }
 
-.sidebar a {
-  display: block;
-  color: #39ff14;
-  text-decoration: none;
-  margin: 0.75em 0;
-  padding: 0.5em;
-  border-radius: 4px;
-  background-color: #1a1a1a;
-  box-shadow: 0 0 5px #39ff1466;
-  transition: all 0.3s ease-in-out;
-}
+    .sidebar h2 {
+      color: #00f5ff;
+      font-size: 1.4em;
+      text-align: center;
+      margin-bottom: 1em;
+      text-shadow: 0 0 5px #00f5ff, 0 0 10px #39ff14;
+      border-bottom: 1px solid #00f5ff33;
+      padding-bottom: 0.5em;
+    }
 
-.sidebar a:hover {
-  background-color: #002222;
-  transform: translateX(4px);
-  border-left: 4px solid #00f5ff;
-  color: #00f5ff;
-}
-.sidebar-glow-edge {
-  position: fixed;
-  top: 0;
-  left: 240px;
-  width: 2px;
-  height: 100vh;
-  background: linear-gradient(to bottom, #00f5ff99, transparent);
-  box-shadow: 0 0 10px #00f5ff;
-  z-index: 5;
-}
+    .sidebar a {
+      display: block;
+      color: #39ff14;
+      text-decoration: none;
+      margin: 0.75em 0;
+      padding: 0.5em;
+      border-radius: 4px;
+      background-color: #1a1a1a;
+      box-shadow: 0 0 5px #39ff1466;
+      transition: all 0.3s ease-in-out;
+    }
 
-.main-content {
-  margin-left: 260px; /* make room for the wider sidebar */
-  padding: 3em 2em;
-  background: radial-gradient(circle at top left, #050505, #000);
-  min-height: 100vh;
-  z-index: 1;
-}
+    .sidebar a:hover {
+      background-color: #002222;
+      transform: translateX(4px);
+      border-left: 4px solid #00f5ff;
+      color: #00f5ff;
+    }
 
+    .sidebar-glow-edge {
+      position: fixed;
+      top: 0;
+      left: 240px;
+      width: 2px;
+      height: 100vh;
+      background: linear-gradient(to bottom, #00f5ff99, transparent);
+      box-shadow: 0 0 10px #00f5ff;
+      z-index: 5;
+    }
+
+    .main-content {
+      margin-left: 260px;
+      padding: 3em 2em;
+      background: radial-gradient(circle at top left, #050505, #000);
+      min-height: 100vh;
+      z-index: 1;
+    }
+
+    .audio-toggle {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #0ff;
+      color: black;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 1rem;
+      box-shadow: 0 0 10px #0ff;
+      z-index: 20;
+      cursor: pointer;
+    }
+
+    .audio-toggle.active {
+      background: #0f0;
+      box-shadow: 0 0 15px #0f0;
+    }
+
+    .content h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1em;
+      color: #39ff14;
+      text-shadow: 0 0 5px #39ff14;
+    }
+
+    .codex-link {
+      display: inline-block;
+      margin: 0.5em;
+      color: #00f5ff;
+      text-decoration: none;
+      border-bottom: 1px dotted #00f5ff;
+    }
+
+    .section {
+      margin-top: 3em;
+    }
+
+    canvas#veil {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
+
 <body>
   <div class="sidebar-glow-edge"></div>
- <div class="sidebar">
-  <h2>Neon Verses</h2>
-  <a href="Verse1.html">Verse 1</a>
-  <a href="Verse2.html">Verse 2</a>
-  <a href="Verse3.html">Verse 3</a>
-  <a href="Verse4.html">Verse 4</a>
-  <a href="Verse5.html">Verse 5</a>
-</div>
-<div class="main-content">
-  <!-- Your current main page content goes here -->
-</div>
-  <!-- ASCII Veil Canvas -->
-  <canvas id="veil"></canvas>
+  <div class="sidebar">
+    <h2>Neon Verses</h2>
+    <a href="Verse1.html">Verse 1</a>
+    <a href="Verse2.html">Verse 2</a>
+    <a href="Verse3.html">Verse 3</a>
+    <a href="Verse4.html">Verse 4</a>
+    <a href="Verse5.html">Verse 5</a>
+  </div>
 
-  <div class="content">
-    <h1>🌌 = Muse Codex 🌌</h1>
+  <div class="main-content">
+    <canvas id="veil"></canvas>
 
-    <a href="#philosophy" class="codex-link">🧿 Philosophy</a>
-    <a href="#fragments" class="codex-link">🔮 Fragments</a>
-    <a href="#videopoems" class="codex-link">📼 VideoPoems</a>
-    <a href="#tools" class="codex-link">🧰 Tools of the Muse</a>
+    <div class="content">
+      <h1>🌌 = Muse Codex 🌌</h1>
 
-    <div id="philosophy" class="section">
-      <h2>🧿 Philosophy</h2>
-      <p>Here lies the heartbeat of Neon Digit Muse — where code and spirit entwine. This is the theology of pixels, the gospel of glitch. Write your truth here, Philip, etched in electric ink.</p>
-    </div>
+      <a href="#philosophy" class="codex-link">🧿 Philosophy</a>
+      <a href="#fragments" class="codex-link">🔮 Fragments</a>
+      <a href="#videopoems" class="codex-link">📼 VideoPoems</a>
+      <a href="#tools" class="codex-link">🧰 Tools of the Muse</a>
 
-    <div id="fragments" class="section">
-      <h2>🔮 Fragments</h2>
-      <p>A scroll of cyber-lyrical pieces, each a shard of time and intent. We’ll add links to the animated MP4s, digital poetry, and cosmic chiptune loops here soon.</p>
-    </div>
+      <div id="philosophy" class="section">
+        <h2>🧿 Philosophy</h2>
+        <p>Here lies the heartbeat of Neon Digit Muse — where code and spirit entwine. This is the theology of pixels, the gospel of glitch.</p>
+      </div>
 
-    <div id="videopoems" class="section">
-      <h2>📼 VideoPoems</h2>
-      <p>Portal to your moving verses — Neon Emerald Funk and her children. Embed video players here, or link to VEED/YouTube/Vimeo as needed.</p>
-    </div>
+      <div id="fragments" class="section">
+        <h2>🔮 Fragments</h2>
+        <p>Scroll of cyber-lyrical pieces, each a shard of time and intent. Links to digital poetry, MP4s, chiptunes coming soon.</p>
+      </div>
 
-    <div id="tools" class="section">
-      <h2>🧰 Tools of the Muse</h2>
-      <p>Your design language, ASCII experiments, glitch engines, and links to GitHub repos, Verse Engine, or helper GPTs. We can expand this into a dynamic toolkit as your constellation grows.</p>
+      <div id="videopoems" class="section">
+        <h2>📼 VideoPoems</h2>
+        <p>Portal to your moving verses — Neon Emerald Funk and her children. Embed videos or link out.</p>
+      </div>
+
+      <div id="tools" class="section">
+        <h2>🧰 Tools of the Muse</h2>
+        <p>Your design language, ASCII experiments, glitch engines, helper GPTs... expanding soon.</p>
+      </div>
     </div>
   </div>
 
+  <!-- Ambient Rain Canvas -->
   <script>
     const canvas = document.getElementById("veil");
     const ctx = canvas.getContext("2d");
@@ -164,73 +217,33 @@
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
     });
-// 🎵 Muse Audio Control
-const audio = document.getElementById('muse-audio');
-const toggle = document.getElementById('audio-toggle');
-
-toggle.addEventListener('click', () => {
-  if (audio.muted) {
-    audio.muted = false;
-    toggle.textContent = '🔊 Muse: On';
-    toggle.style.background = '#0f0';
-    toggle.style.boxShadow = '0 0 15px #0f0';
-  } else {
-    audio.muted = true;
-    toggle.textContent = '🔈 Muse: Off';
-    toggle.style.background = '#0ff';
-    toggle.style.boxShadow = '0 0 10px #0ff';
-  }
-});
   </script>
-<!-- 🌌 Ambient Audio -->
-<audio id="muse-audio" loop autoplay muted>
-  <source src="https://assets.codepen.io/605876/ambient-loop.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
 
-<!-- 🎛️ Toggle Button -->
-<button id="audio-toggle" style="
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  background: #0ff;
-  color: black;
-  border: none;
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
-  font-family: monospace;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #0ff;
-  z-index: 10;
-  cursor: pointer;
-">
-  🔈 Muse: Off
-</button>
-<audio id="muse-audio" loop autoplay muted>
-  <source src="https://assets.codepen.io/605876/ambient-loop.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
+  <!-- Muse Audio -->
+  <audio id="muse-audio" loop autoplay muted>
+    <source src="https://assets.codepen.io/605876/ambient-loop.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-<button id="audio-toggle" class="audio-toggle">
-  🔈 Muse: Off
-</button>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const audio = document.getElementById('muse-audio');
-    const toggle = document.getElementById('audio-toggle');
+  <!-- Audio Toggle -->
+  <button id="audio-toggle" class="audio-toggle">🔈 Muse: Off</button>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('muse-audio');
+      const toggle = document.getElementById('audio-toggle');
 
-    toggle.addEventListener('click', () => {
-      if (audio.muted) {
-        audio.muted = false;
-        toggle.textContent = '🔊 Muse: On';
-        toggle.classList.add('active');
-      } else {
-        audio.muted = true;
-        toggle.textContent = '🔈 Muse: Off';
-        toggle.classList.remove('active');
-      }
+      toggle.addEventListener('click', () => {
+        if (audio.muted) {
+          audio.muted = false;
+          toggle.textContent = '🔊 Muse: On';
+          toggle.classList.add('active');
+        } else {
+          audio.muted = true;
+          toggle.textContent = '🔈 Muse: Off';
+          toggle.classList.remove('active');
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
