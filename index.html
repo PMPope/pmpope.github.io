@@ -15,86 +15,18 @@
     }
 
     .sidebar {
-      width: 240px;
-      background: linear-gradient(to bottom, #0a0a0a, #111111);
-      padding: 1.5em 1em;
-      box-shadow: 5px 0 15px #00f5ff66;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      overflow-y: auto;
-      border-right: 2px solid #00f5ff44;
-      z-index: 10;
-    }
-
-    .sidebar::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 5px;
-      background: linear-gradient(to right, #00f5ff, transparent, #00f5ff);
-      box-shadow: 0 0 10px #00f5ffaa;
-    }
-
-    .sidebar h2 {
-      color: #00f5ff;
-      font-size: 1.4em;
-      text-align: center;
-      margin-bottom: 1em;
-      text-shadow: 0 0 5px #00f5ff, 0 0 10px #39ff14;
-      border-bottom: 1px solid #00f5ff33;
-      padding-bottom: 0.5em;
-    }
-
-    .sidebar a {
-      display: block;
-      color: #39ff14;
-      text-decoration: none;
-      margin: 0.75em 0;
-      padding: 0.5em;
-      border-radius: 4px;
-      background-color: #1a1a1a;
-      box-shadow: 0 0 5px #39ff1466;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .sidebar a:hover {
-      background-color: #002222;
-      transform: translateX(4px);
-      border-left: 4px solid #00f5ff;
-      color: #00f5ff;
-    }
-
-    .sidebar-glow-edge {
-      position: fixed;
-      top: 0;
-      left: 240px;
-      width: 2px;
-      height: 100vh;
-      background: linear-gradient(to bottom, #00f5ff99, transparent);
-      box-shadow: 0 0 10px #00f5ff;
-      z-index: 5;
-    }
-			.sidebar-toggle {
+  width: 240px;
+  background: linear-gradient(to bottom, #0a0a0a, #111111);
+  padding: 1.5em 1em;
+  box-shadow: 5px 0 15px #00f5ff66;
+  height: 100vh;
   position: fixed;
-  top: 1rem;
-  left: 1rem;
-  background: #00f5ff;
-  color: black;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  font-family: monospace;
-  font-size: 1.1em;
-  z-index: 30;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00f5ff;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.sidebar-toggle:hover {
-  background: #0ff;
-  transform: scale(1.05);
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  border-right: 2px solid #00f5ff44;
+  z-index: 10;
+  transition: transform 0.4s ease-in-out;
 }
 
 body.collapsed .sidebar {
