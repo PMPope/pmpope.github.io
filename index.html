@@ -75,7 +75,39 @@
       box-shadow: 0 0 10px #00f5ff;
       z-index: 5;
     }
+			.sidebar-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #00f5ff;
+  color: black;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 1.1em;
+  z-index: 30;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f5ff;
+  transition: background 0.3s, transform 0.2s;
+}
 
+.sidebar-toggle:hover {
+  background: #0ff;
+  transform: scale(1.05);
+}
+
+body.collapsed .sidebar {
+  transform: translateX(-250px);
+}
+
+body.collapsed .sidebar-glow-edge {
+  opacity: 0;
+}
+
+body.collapsed .main-content {
+  margin-left: 1em;
+}
     .main-content {
       margin-left: 260px;
       padding: 3em 2em;
