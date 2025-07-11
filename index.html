@@ -106,6 +106,54 @@
   background-color: #0f0;
   box-shadow: 0 0 15px #0f0;
 }
+    body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: black;
+  color: #39ff14;
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #111;
+  padding: 1em;
+  box-shadow: 2px 0 10px #00f5ff88;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: #00f5ff;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 1em;
+  text-shadow: 0 0 5px #00f5ff;
+}
+
+.sidebar a {
+  display: block;
+  color: #39ff14;
+  text-decoration: none;
+  margin: 0.5em 0;
+  padding: 0.25em;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #222;
+  border-left: 4px solid #00f5ff;
+  padding-left: 0.5em;
+}
+
+.main-content {
+  margin-left: 220px; /* Give space for the sidebar */
+  padding: 2em;
+}
+
   </style>
 </head>
 <body>
