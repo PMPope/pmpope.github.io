@@ -1,0 +1,10 @@
+/neon-digit-muse/      ← Your main GitHub repo folder (or site root)
+│
+├── verse_1/           ← Folder for your first poem (already created, perhaps?)
+│
+├── verse_2/           ← ⚡ This is the folder you’ll now create for “eeeXcusitory eeexplaiNATION”
+│   ├── poem.md        ← The poem itself, typed in Markdown
+│   ├── verse2.png     ← The glitch-art image (uploaded file)
+│   └── README.md      ← Optional: your commentary, inspiration, etc.
+│
+└── index.html         ← (or whatever site structure you’re building)
